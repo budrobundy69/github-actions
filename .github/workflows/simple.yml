@@ -5,9 +5,9 @@ run-name: Run of the simple workflow
 on:
   # Workflow run trigger events
   push:
-    branches: ["main"]
+    branches: [ "main" ]
   pull_request:
-    branches: ["main"]
+    branches: [ "main" ]
   # Manually trigger workflow run
   workflow_dispatch:
 
@@ -28,3 +28,7 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+
+      - name: test node command
+        run: |
+          node -e "console.log('running from node!')"
